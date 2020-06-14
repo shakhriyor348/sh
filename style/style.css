@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    user-select: none;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.nav{
+    position: fixed;
+    left: -350px;
+    height: 100%;
+    width: 350px;
+    color: #f1f1f1;
+    background: #394660;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+    transition: all .6s;
+}
+nav .brand{
+    display: flex;
+    width: 100%;
+    background: #063146;
+    font-size: 26px;
+    padding: 32px 20px;
+    text-transform: uppercase;
+}
+nav ul li{
+    cursor: pointer;
+    background: #042333;
+    font-size: 20px;
+    width: 100%;
+    height: 70px;
+    padding-left: 20px;
+    line-height: 70px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid #000;
+    transition: .4s;
+}
+nav ul li:hover{
+    padding-left: 50px;
+    
+}
+nav ul li:hover a{
+    padding-left: 30px;
+
+}
+nav ul li a {
+    position: absolute;
+    left: 50px;
+    transition: .4s;
+    
+}
+nav .share{
+    height: 100%;
+    line-height: 70px;
+    text-align: center;
+    font-size: 20px;
+    background: #042331;
+    border-top: 1pz solid rgba(255, 255, 255, 0.1);
+}
+nav .share i{
+    cursor: pointer;
+    margin: 0 10px;
+    transition: .2s;
+    color: white;
+
+}
+nav .share i:hover{
+    transform: scale(1.2);
+}
+input{
+    display: none;
+}
+.icon1{
+    position: absolute;
+    cursor: pointer;
+    margin: 20px;
+    color: #f1f1f1;
+    border: 1px solid #f1f1f1;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 20px;
+}
+nav .brand .icon2{
+    cursor: pointer;
+    margin-left: 50px;
+    font-size: 30px;
+
+}
+
+input:checked ~ .icon1{
+    display: none;
+}
+
+input:checked ~ .nav{
+    left: 0;
+}
+input:checked ~ section{
+    margin-left: 350px;
+    height: 100vh;
+    
+}
+section{
+    background: url(../img/bg.jpg) no-repeat center center /cover;
+    height: 100vh;
+    transition: all .6s;
+}
